@@ -3,60 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Hanuman Constructions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Expense Tracker</h1>
-        
-        <form id="expenseForm">
-            <label for="date">Date:</label>
-            <input type="date" id="date" required>
 
-            <label for="purpose">Purpose:</label>
-            <input type="text" id="purpose" placeholder="E.g., Rent, Salary" required>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <h1>Hanuman Constructions</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <label for="type">Transaction Type:</label>
-            <select id="type">
-                <option value="credit">Credit</option>
-                <option value="debit">Debit</option>
-            </select>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Building Dreams with Precision</h2>
+            <p>Delivering top-notch construction solutions tailored to your needs.</p>
+            <a href="#services" class="btn">Learn More</a>
+            <a href="#contact" class="btn">Get a Quote</a>
+        </div>
+    </section>
 
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="Amount" required>
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Hanuman Constructions has been a leader in the construction industry, specializing in both residential and commercial projects for over 20 years.</p>
+        <div class="about-cards">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To provide high-quality construction services with the utmost precision and care, ensuring client satisfaction every step of the way.</p>
+            </div>
+            <div class="card">
+                <h3>Our Values</h3>
+                <p>Trust, Quality, Excellence. We stand by our values in every project we undertake.</p>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit">Add Transaction</button>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Residential Construction</h3>
+                <p>We design and build homes tailored to your vision and budget.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Construction</h3>
+                <p>From office buildings to shopping centers, we build spaces that inspire.</p>
+            </div>
+            <div class="service-card">
+                <h3>Renovations</h3>
+                <p>We breathe new life into existing structures, making them better than ever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Our Projects</h2>
+        <div class="project-gallery">
+            <img src="project1.jpg" alt="Residential Project">
+            <img src="project2.jpg" alt="Commercial Project">
+            <img src="project3.jpg" alt="Renovation">
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
-
-        <div class="balance">
-            <h3>Total Credit: <span id="totalCredit">0</span></h3>
-            <h3>Total Debit: <span id="totalDebit">0</span></h3>
-            <h3>Balance: <span id="balance">0</span></h3>
+        <div class="contact-info">
+            <p>Email: info@hanumanconstructions.com</p>
+            <p>Phone: +1234567890</p>
+            <p>Location: 123 Main Street, City, Country</p>
         </div>
+    </section>
 
-        <div class="report-buttons">
-            <button id="dailyReport">Daily Report</button>
-            <button id="monthlyReport">Monthly Report</button>
-            <button id="yearlyReport">Yearly Report</button>
-        </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Hanuman Constructions. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
 
-        <table id="transactionTable">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Purpose</th>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="transactionList">
-                <!-- Transactions will be listed here -->
-            </tbody>
-        </table>
-    </div>
-
-    <script src="app.js"></script>
+    <!--<script src="app.js"></script>-->
 </body>
 </html>
